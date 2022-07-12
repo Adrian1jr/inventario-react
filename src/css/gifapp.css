@@ -1,0 +1,23 @@
+.container-add-category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-add-category {
+  background-color: white;
+  border-radius: 10px;
+  height: 2.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-add-category:hover {
+  transition: 0.9s;
+  background-color: yellow;
+}
+
+.btn-add-category:not(:hover) {
+  transition: 0.9s;
+  background-color: white;
+}
