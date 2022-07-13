@@ -25,6 +25,7 @@ export const Inventario = () => {
           <h1 key={comp.id}>{comp.name}</h1>
         ))}
       </div>
+      <h1>Resumen De Inventario: </h1>
     </div>
   );
 };
