@@ -7,7 +7,8 @@ export default function ComputerCard() {
     "https://syntranet-last-back-end-dev-mdqm7.ondigitalocean.app/api/equipoComputo/"
   );
 
-  const results = data ? data.results : [];
+  const usuarios = data ? data.results : [];
+  const cantidadUsuarios = usuarios.length;
 
   return (
     <>
@@ -15,19 +16,10 @@ export default function ComputerCard() {
       <Divider className="divider" variant="middle" />
 
       <div className="cards">
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p>Error: {error.message}</p>
-        ) : (
-          results.map((result) => (
-            <div className="card" key={result.uid}>
-              <p>
-                Usuario: <strong>{result.usuario}</strong>
-              </p>
-            </div>
-          ))
-        )}
+        <div className="card">
+          <p className="background-icon">1</p>
+          <p className="texto-cantidad">Usuarios: {cantidadUsuarios}</p>
+        </div>
       </div>
     </>
   );
