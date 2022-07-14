@@ -1,5 +1,5 @@
 import CardResume from "../components/CardResume";
-import Table from "../components/table";
+import DataTable from "../components/table";
 import ResponsiveAppBar from "../components/NavBar";
 import useFetch from "../hooks/use-fetch";
 import Divider from "@mui/material/Divider";
@@ -22,17 +22,17 @@ export const Inventario = () => {
   const celulares = data2 ? data2.results : [];
   const componentes = data3 ? data3.results : [];
 
-  const dataUsuarios = {
+  const cantidadUsuarios = {
     tipo: "Usuarios",
     cantidad: usuarios.length,
   };
 
-  const dataCelulares = {
+  const cantidadCelulares = {
     tipo: "Celulares",
     cantidad: celulares.length,
   };
 
-  const dataComponentes = {
+  const cantidadComponentes = {
     tipo: "Componentes",
     cantidad: componentes.length,
   };
@@ -43,12 +43,12 @@ export const Inventario = () => {
       <h2 className="title-section">Resumen</h2>
       <Divider className="divider" variant="middle" />
       <section className="container-cards">
-        <CardResume data={dataUsuarios} />
-        <CardResume data={dataCelulares} />
-        <CardResume data={dataComponentes} />
+        <CardResume data={cantidadUsuarios} />
+        <CardResume data={cantidadCelulares} />
+        <CardResume data={cantidadComponentes} />
       </section>
       <section className="container-table">
-        <Table />
+        <DataTable data={componentes} />
       </section>
     </>
   );
