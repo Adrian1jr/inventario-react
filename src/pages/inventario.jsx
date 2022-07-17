@@ -1,5 +1,5 @@
 import CardResume from "../components/CardResume";
-import DataTable from "../components/table";
+import DataTable from "../components/Table";
 import ResponsiveAppBar from "../components/NavBar";
 import useFetch from "../hooks/use-fetch";
 import Divider from "@mui/material/Divider";
